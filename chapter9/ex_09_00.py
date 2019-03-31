@@ -16,3 +16,4 @@ for line in fh:
 print("There were", len(lst), "lines in the file with From as the first word")
 print("print line 1")
 print("print line 2")
+print("print line 3")
