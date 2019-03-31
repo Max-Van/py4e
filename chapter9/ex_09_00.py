@@ -12,9 +12,6 @@ for line in fh:
     lst.append(words[1])
     print(words[1])
 
-#print(lst)
+
 print("There were", len(lst), "lines in the file with From as the first word")
-#line1
 print("print line 1")
-#line2
-#line3
