@@ -15,3 +15,4 @@ for line in fh:
 #print(lst)
 print("There were", len(lst), "lines in the file with From as the first word")
 #line1
+#line2 
