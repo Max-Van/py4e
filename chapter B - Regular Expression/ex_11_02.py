@@ -1,15 +1,25 @@
-import socket
+import re
 
-mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-mysock.connect(('data.pr4e.org', 80))
-cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
-mysock.send(cmd)
+#fh=open('testfile.txt')
 
-while True:
-    data = mysock.recv(512)
-    if len(data) < 1:
-        break
-    #print(data.decode(),end='')
-    print(data.decode())
+#for line in fh:
+#    y=re.findall('[aeiou]+',line)
+#    print(y)
 
-mysock.close()
+str='fanfan: 12.2312.46.1212.131  '
+
+#y=re.findall('([^ ]*)@',str)
+y=re.findall('[0-9.]+',str)
+print(y)
+#print(a)
+
+#  ^X.*:
+#fh=open('/Users/max/Develop/Coursera/py4egit/chapter7 - file/mbox-short.txt')
+
+#for line in fh:
+#    if re.search('^X.*:',line):
+#        print(line)
+#  ^X-\S+*:
+#for line in fh:
+#    if re.search('^X-\S+:',line):
+#        print(line)
