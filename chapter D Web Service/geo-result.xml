@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GeocodeResponse>
+ <status>OK</status>
+ <result>
+  <type>establishment</type>
+  <type>point_of_interest</type>
+  <type>university</type>
+  <formatted_address>ул, Bol'shaya Sadovaya Ulitsa, 105/42, Rostov-on-Don, Rostov Oblast, Russia, 344006</formatted_address>
+  <address_component>
+   <long_name>105/42</long_name>
+   <short_name>105/42</short_name>
+   <type>street_number</type>
+  </address_component>
+  <address_component>
+   <long_name>Bol'shaya Sadovaya Ulitsa</long_name>
+   <short_name>Bol'shaya Sadovaya Ulitsa</short_name>
+   <type>route</type>
+  </address_component>
+  <address_component>
+   <long_name>Rostov-on-Don</long_name>
+   <short_name>Rostov-on-Don</short_name>
+   <type>locality</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Rostov Oblast</long_name>
+   <short_name>Rostov Oblast</short_name>
+   <type>administrative_area_level_1</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Russia</long_name>
+   <short_name>RU</short_name>
+   <type>country</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>344006</long_name>
+   <short_name>344006</short_name>
+   <type>postal_code</type>
+  </address_component>
+  <geometry>
+   <location>
+    <lat>47.2247190</lat>
+    <lng>39.7283340</lng>
+   </location>
+   <location_type>ROOFTOP</location_type>
+   <viewport>
+    <southwest>
+     <lat>47.2233700</lat>
+     <lng>39.7269850</lng>
+    </southwest>
+    <northeast>
+     <lat>47.2260680</lat>
+     <lng>39.7296830</lng>
+    </northeast>
+   </viewport>
+  </geometry>
+  <place_id>ChIJNeHD4p-540AR2Q0_ZjwmKJ8</place_id>
+  <plus_code>
+   <global_code>8GVX6PFH+V8</global_code>
+   <compound_code>6PFH+V8 Rostov-on-Don, Rostov Oblast, Russia</compound_code>
+  </plus_code>
+ </result>
+</GeocodeResponse>
