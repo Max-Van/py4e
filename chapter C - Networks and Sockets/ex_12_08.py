@@ -20,11 +20,11 @@ soup = BeautifulSoup(html, "html.parser")
 sum=0
 print(soup)
 # Retrieve all of the anchor tags
-#tags = soup('span')
-#for tag in tags:
+tags = soup('a')
+for tag in tags:
     # Look at the parts of a tag
     #print('TAG:', tag)
-    #print('URL:', tag.get('href', None))
+    print('URL:', tag.get('href', None))
     #sum += int(tag.contents[0])
     #print('Attrs:', tag.attrs)
 #print(sum)

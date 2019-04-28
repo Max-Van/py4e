@@ -15,6 +15,8 @@ data = '''
 info = json.loads(data)
 print('User count:', len(info))
 
+print(info)
+
 for item in info:
     print('Name', item['name'])
     print('Id', item['id'])

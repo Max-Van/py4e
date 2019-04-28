@@ -8,13 +8,13 @@ mysock.send(cmd)
 count=0
 
 while True:
-    data = mysock.recv(512)
+    data = mysock.recv(1024)
     if len(data) < 1:
         break
     #print(data.decode(),end='')
     print(data.decode())
     count += 1
-    print(count)
+    print('Retrieving data for the ', count, 'times.')
 
 
 mysock.close()

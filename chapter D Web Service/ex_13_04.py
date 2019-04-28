@@ -24,6 +24,8 @@ while True:
 
     parms = dict()
     parms['address'] = address
+    #parms['language'] = 'zh-CN'
+    #parms['language'] = 'zh-TW'
     if api_key is not False: parms['key'] = api_key
     url = serviceurl + urllib.parse.urlencode(parms)
 
@@ -45,7 +47,10 @@ while True:
     print(json.dumps(js, indent=4))
 
     myplaceid = js['results'][0]['place_id']
+    formatedaddr = js['results'][0]['formatted_address']
+
     #lng = js['results'][0]['geometry']['location']['lng']
     #print('lat', lat, 'lng', lng)
     #location = js['results'][0]['formatted_address']
     print('my place id is ',myplaceid)
+    print('formated address is',formatedaddr)
