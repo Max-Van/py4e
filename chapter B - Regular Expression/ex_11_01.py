@@ -1,7 +1,7 @@
 import re
 #fh=open('regex_sum_42.txt')
-fh=open('regex_sum_202314.txt')
-
+#fh=open('regex_sum_202314.txt')
+fh=open('regex_sum_202230.txt')
 sum=0
 
 for line in fh:
