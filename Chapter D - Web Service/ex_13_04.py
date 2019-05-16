@@ -25,7 +25,7 @@ while True:
     parms = dict()
     parms['address'] = address
     #parms['language'] = 'zh-CN'
-    #parms['language'] = 'zh-TW'
+    parms['language'] = 'zh-TW'
     if api_key is not False: parms['key'] = api_key
     url = serviceurl + urllib.parse.urlencode(parms)
 

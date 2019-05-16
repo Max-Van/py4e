@@ -3,6 +3,8 @@ import sinaweibopy3
 import urllib.request, urllib.parse, urllib.error
 import json
 import ssl
+import ast
+import re
 
 
 def main():
@@ -32,14 +34,30 @@ def main():
         client.set_access_token(result.access_token, result.expires_in)
 
         # step 4 : using api by access_token
-        #print(client.public_timeline())  # get the latest public Weibo
+        data=str(client.public_timeline())  # get the latest public Weibo
+        d=ast.literal_eval(data)
+        fh = open("weibo-content.txt", "w")
+        fh.write( data )      # str() converts to string
+        fh.close()
+        #
+        print(type(d))
+        statuses=d['statuses']
+        print(len(statuses))
+        for i in range(0, len(statuses)):
+            print('====================第',i+1,'条微博==========================')
+            print('微博创建时间:', statuses[i]['created_at'])
+            print('昵称:', statuses[i]['user']['screen_name'])
+            print('简介:', statuses[i]['user']['description'])
+            print('位置:', statuses[i]['user']['location'])
+            print('微博:', statuses[i]['text'])
+            print('发送设备:', re.findall('>(.*)<', statuses[i]['source']))
 
         #f = open("weibo-content.txt", "w")
         #f.write( str(client.public_timeline())  )      # str() converts to string
         #f.close()
-        data = str(client.public_timeline())
-        js = json.loads(data)
-        print(json.dumps(js, indent=4))
+        #data = str(client.public_timeline())
+        #js = json.loads(data)
+        #print(json.dumps(js, indent=4))
 
 
 
