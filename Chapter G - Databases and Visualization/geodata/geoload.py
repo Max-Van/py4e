@@ -9,6 +9,8 @@ import sys
 api_key = False
 # If you have a Google Places API key, enter it here
 # api_key = 'AIzaSy___IDByT70'
+api_key = 'AIzaSyC160R_72mbQVVVib2YpG02otEEYtQX9sE'
+
 
 if api_key is False:
     api_key = 42
@@ -30,7 +32,7 @@ ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
-fh = open("where.data")
+fh = open("where.data2")
 count = 0
 for line in fh:
     if count > 200 :
@@ -51,6 +53,7 @@ for line in fh:
 
     parms = dict()
     parms["address"] = address
+    parms["language"] = 'zh_CN'
     if api_key is not False: parms['key'] = api_key
     url = serviceurl + urllib.parse.urlencode(parms)
 
