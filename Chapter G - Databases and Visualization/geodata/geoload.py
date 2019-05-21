@@ -21,7 +21,7 @@ else :
 # Additional detail for urllib
 # http.client.HTTPConnection.debuglevel = 1
 
-conn = sqlite3.connect('geodata.sqlite')
+conn = sqlite3.connect('/Users/max/Develop/Coursera/py4egit/Chapter G - Databases and Visualization/geodata/geodata.sqlite')
 cur = conn.cursor()
 
 cur.execute('''
@@ -32,7 +32,7 @@ ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
-fh = open("where.data2")
+fh = open("/Users/max/Develop/Coursera/py4egit/Chapter G - Databases and Visualization/geodata/where.data2")
 count = 0
 for line in fh:
     if count > 200 :
